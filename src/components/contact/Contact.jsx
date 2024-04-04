@@ -1,7 +1,6 @@
 import { useRef, useState } from "react";
 import "./contact.scss";
 import { motion, useInView } from "framer-motion";
-import emailjs from "@emailjs/browser";
 
 const variants = {
   initial: {
@@ -28,22 +27,33 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
-    emailjs
-      .sendForm(
-        "service_94y20xo",
-        "template_v10u2oh",
-        formRef.current,
-        "pX_2hasGmGcuvjXIW"
-      )
-      .then(
-        (result) => {
-          setSuccess(true)
-        },
-        (error) => {
-          setError(true);
+  
+    const name = formRef.current.elements.name.value;
+    const email = formRef.current.elements.email.value;
+    const message = formRef.current.elements.message.value;
+  
+    fetch('http://localhost:3001/send-email', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ name, email, message }),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
         }
-      );
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data.message);
+        setSuccess(true);
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+        setError(true);
+        setSuccess(false);
+      });
   };
 
   return (
@@ -58,15 +68,15 @@ const Contact = () => {
         <motion.h1 variants={variants}>Let’s work together</motion.h1>
         <motion.div className="item" variants={variants}>
           <h2>Mail</h2>
-          <span>hello@react.dev</span>
+          <span>ivan.zhovnych@gmail.com</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
           <h2>Address</h2>
-          <span>Hello street New York</span>
+          <span>Winnipeg, Canada</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
           <h2>Phone</h2>
-          <span>+1 234 5678</span>
+          <span>+1 431 557-8592</span>
         </motion.div>
       </motion.div>
       <div className="formContainer">
