@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import "./services.scss";
+import "./skills.scss";
 import { motion, useInView } from "framer-motion";
 
 const variants = {
@@ -19,24 +19,23 @@ const variants = {
   },
 };
 
-const Services = () => {
+const Skills = () => {
   const ref = useRef();
 
   const isInView = useInView(ref, { margin: "-100px" });
 
   return (
     <motion.div
-      className="services"
+      className="skills"
       variants={variants}
       initial="initial"
-      // animate="animate"
-      // whileInView="animate"
+      whileInView="animate"
       ref={ref}
       animate={"animate"}
     >
       <motion.div className="textContainer" variants={variants}>
         <p>
-          I focus on helping your brand grow
+          I focus on helping your company grow
           <br /> and move forward
         </p>
         <hr />
@@ -45,14 +44,14 @@ const Services = () => {
         <div className="title">
           <img src="/people.webp" alt="" />
           <h1>
-            <motion.b whileHover={{color:"orange"}}>Unique</motion.b> Ideas
+            <motion.b whileHover={{color:"orange"}}>Professional</motion.b> Skills
           </h1>
         </div>
         <div className="title">
           <h1>
             <motion.b whileHover={{color:"orange"}}>For Your</motion.b> Business.
           </h1>
-          <button>WHAT WE DO?</button>
+          <button>My toolbox!</button>
         </div>
       </motion.div>
       <motion.div className="listContainer" variants={variants}>
@@ -60,57 +59,41 @@ const Services = () => {
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <h2>Branding</h2>
+          <h2>Front-End</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-            animi! Ad nam pariatur assumenda quae mollitia libero repellat
-            explicabo maiores?
+          <br/> JavaScript <br/> React <br/> CSS <br/> HTML <br/> Bootstrap <br/> Material UI <br/> Tailwind <br/>
           </p>
-          <button>Go</button>
         </motion.div>
         <motion.div
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <h2>Branding</h2>
+          <h2>Back-End</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-            animi! Ad nam pariatur assumenda quae mollitia libero repellat
-            explicabo maiores?
+            Python <br/> Next.js <br/> PHP <br/> Java <br/>JSON<br/> XML
           </p>
-          <button>Go</button>
         </motion.div>
         <motion.div
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <h2>Branding</h2>
+          <h2>Databases</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-            animi! Ad nam pariatur assumenda quae mollitia libero repellat
-            explicabo maiores?
+            MongoDB <br/> MySQL <br/> Oracle <br/> SQL Server <br/> PostgreSQL
           </p>
-          <button>Go</button>
         </motion.div>
         <motion.div
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <h2>Branding</h2>
+          <h2>Other skills</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-            animi! Ad nam pariatur assumenda quae mollitia libero repellat
-            explicabo maiores?
+            GitHub <br/> APIs <br/> AWS <br/> Docker <br/> Kubernetes                                                                               
           </p>
-          <button>Go</button>
         </motion.div>
       </motion.div>
     </motion.div>
   );
 };
 
-export default Services;
+export default Skills;

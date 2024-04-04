@@ -74,7 +74,7 @@ const Hero = () => {
         Versatile Resourceful Adaptable
       </motion.div>
       <div className="imageContainer">
-        <img src="/hero.png" alt="" />
+        <img src="/hero3.png" alt="profile picture" />
       </div>
     </div>
   );
