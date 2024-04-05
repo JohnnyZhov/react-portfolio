@@ -120,11 +120,11 @@
         padding: 10px;
       }
 
-      p {
-        @include mobile {
-          display: none;
-        }
-      }
+      // p {
+      //   @include mobile {
+      //     display: none;
+      //   }
+      // }
 
       button {
         padding: 10px;
