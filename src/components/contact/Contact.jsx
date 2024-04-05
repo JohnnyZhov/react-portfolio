@@ -32,28 +32,11 @@ const Contact = () => {
     const email = formRef.current.elements.email.value;
     const message = formRef.current.elements.message.value;
   
-    fetch('http://localhost:3001/send-email', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ name, email, message }),
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then((data) => {
-        console.log(data.message);
-        setSuccess(true);
-      })
-      .catch((error) => {
-        console.error('Error:', error);
-        setError(true);
-        setSuccess(false);
-      });
+    // Create the mailto link
+    const mailtoLink = `mailto:ivan.zhovnych@gmail.com?subject=Contact from ${name}&body=${message}%0D%0A%0D%0AFrom: ${email}`;
+  
+    // Open the user's email client
+    window.location.href = mailtoLink;
   };
 
   return (

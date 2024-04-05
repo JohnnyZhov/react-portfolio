@@ -54,7 +54,6 @@
       @include mobile {
         flex-direction: column;
         text-align: center;
-        gap: 20px;
       }
 
       img {
@@ -74,7 +73,7 @@
         font-weight: 100;
 
         @include mobile {
-          font-size: 36px;
+          font-size: 30px;
         }
       }
 
@@ -96,13 +95,14 @@
     }
   }
   .listContainer {
-    flex: 2;
+    flex: 1;
     display: flex;
     max-width: 1366px;
     margin: auto;
 
     @include mobile {
-      flex-direction: column;
+      flex-direction: row;
+      flex-wrap: wrap;
       width: 100%;
     }
 
@@ -115,9 +115,10 @@
 
       @include mobile {
         border: none;
-        align-items: center;
-        gap: 20px;
-        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 50%;
+        padding: 20px;
       }
 
       // p {
