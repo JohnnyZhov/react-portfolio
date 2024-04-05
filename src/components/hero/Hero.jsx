@@ -1,5 +1,6 @@
 import "./hero.scss";
 import { motion } from "framer-motion";
+import { Link } from "react-scroll";
 
 const textVariants = {
   initial: {
@@ -31,7 +32,7 @@ const sliderVariants = {
     x: "-220%",
     transition: {
       repeat: Infinity,
-      repeatType:"mirror",
+      repeatType: "mirror",
       duration: 20,
     },
   },
@@ -52,10 +53,22 @@ const Hero = () => {
             Full Stack Web Developer
           </motion.h1>
           <motion.div variants={textVariants} className="buttons">
+          <Link
+              to="portfolio"
+              smooth={true}
+              duration={500}
+            >
             <motion.button variants={textVariants}>
               See the Latest Works
             </motion.button>
-            <motion.button variants={textVariants}>Contact Me</motion.button>
+            </Link>
+            <Link
+              to="contact"
+              smooth={true}
+              duration={500}
+            >
+              <motion.button variants={textVariants}>Contact Me</motion.button>
+            </Link>
           </motion.div>
           <motion.img
             variants={textVariants}
