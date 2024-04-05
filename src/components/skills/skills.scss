@@ -111,7 +111,7 @@
       border: 0.5px solid gray;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: baseline;
 
       @include mobile {
         border: none;
@@ -126,21 +126,21 @@
       //   }
       // }
 
-      button {
-        padding: 10px;
-        background-color: orange;
-        border: none;
-        cursor: pointer;
+      // button {
+      //   padding: 10px;
+      //   background-color: orange;
+      //   border: none;
+      //   cursor: pointer;
 
-        @include mobile {
-          background-color: transparent;
-          border: 1px solid orange;
-          border-radius: 5px;
-          color: orange;
-          width: 50%;
-          padding: 5px;
-        }
-      }
+      //   @include mobile {
+      //     background-color: transparent;
+      //     border: 1px solid orange;
+      //     border-radius: 5px;
+      //     color: orange;
+      //     width: 50%;
+      //     padding: 5px;
+      //   }
+      // }
     }
   }
 }

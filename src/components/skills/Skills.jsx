@@ -44,12 +44,14 @@ const Skills = () => {
         <div className="title">
           <img src="/people.webp" alt="" />
           <h1>
-            <motion.b whileHover={{color:"orange"}}>Professional</motion.b> Skills
+            <motion.b whileHover={{ color: "orange" }}>Professional</motion.b>{" "}
+            Skills
           </h1>
         </div>
         <div className="title">
           <h1>
-            <motion.b whileHover={{color:"orange"}}>For Your</motion.b> Business.
+            <motion.b whileHover={{ color: "orange" }}>For Your</motion.b>{" "}
+            Business.
           </h1>
           <button>My toolbox!</button>
         </div>
@@ -61,7 +63,8 @@ const Skills = () => {
         >
           <h2>Front-End</h2>
           <p>
-          <br/> JavaScript <br/> React <br/> CSS <br/> HTML <br/> Bootstrap <br/> Material UI <br/> Tailwind <br/>
+            <br /> JavaScript <br /> React <br /> CSS <br /> HTML <br />{" "}
+            Bootstrap <br /> Material UI <br /> Tailwind <br />
           </p>
         </motion.div>
         <motion.div
@@ -70,7 +73,9 @@ const Skills = () => {
         >
           <h2>Back-End</h2>
           <p>
-            Python <br/> Next.js <br/> PHP <br/> Java <br/>JSON<br/> XML
+            <br /> Python <br /> Next.js <br /> PHP <br /> Java <br />
+            JSON
+            <br /> XML
           </p>
         </motion.div>
         <motion.div
@@ -79,7 +84,8 @@ const Skills = () => {
         >
           <h2>Databases</h2>
           <p>
-            MongoDB <br/> MySQL <br/> Oracle <br/> SQL Server <br/> PostgreSQL
+            <br /> MongoDB <br /> MySQL <br /> Oracle <br /> SQL Server <br />{" "}
+            PostgreSQL
           </p>
         </motion.div>
         <motion.div
@@ -88,7 +94,7 @@ const Skills = () => {
         >
           <h2>Other skills</h2>
           <p>
-            GitHub <br/> APIs <br/> AWS <br/> Docker <br/> Kubernetes                                                                               
+            <br /> GitHub <br /> APIs <br /> AWS <br /> Docker <br /> Kubernetes
           </p>
         </motion.div>
       </motion.div>
